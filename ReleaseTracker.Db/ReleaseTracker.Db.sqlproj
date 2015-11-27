@@ -58,12 +58,15 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Tables" />
+    <Folder Include="Stored procedures" />
+    <Folder Include="Stored procedures\Projects" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Features.sql" />
     <Build Include="Tables\Projects.sql" />
     <Build Include="Tables\Releases.sql" />
     <Build Include="Tables\Users.sql" />
+    <Build Include="Stored procedures\Projects\InsertNewProject.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ReleaseTracker.Db.publish.xml" />

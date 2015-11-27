@@ -7,13 +7,13 @@ using System.Web.Http;
 
 namespace ReleaseTracker.WebApi.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class ValuesController : ApiController
     {
         // GET api/values
-        public IEnumerable<string> Get()
+        public string Get()
         {
-            return new string[] { "value1", "value2" };
+            return ".....";
         }
 
         // GET api/values/5

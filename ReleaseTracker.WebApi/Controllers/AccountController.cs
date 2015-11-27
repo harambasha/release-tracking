@@ -13,11 +13,13 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
-using ReleaseTracker.WebApi.Models;
-using ReleaseTracker.WebApi.Providers;
-using ReleaseTracker.WebApi.Results;
 
-namespace ReleaseTracker.WebApi.Controllers
+using ReleaseTracker.WebApi.Models;
+using ReleaseTracker.WebApi;
+using ReleaseTracker.WebApi.Results;
+using ReleaseTracker.WebApi.Providers;
+
+namespace OpenBacklog.Factory.Crane.Controllers
 {
     [Authorize]
     [RoutePrefix("api/Account")]
@@ -125,7 +127,7 @@ namespace ReleaseTracker.WebApi.Controllers
 
             IdentityResult result = await UserManager.ChangePasswordAsync(User.Identity.GetUserId(), model.OldPassword,
                 model.NewPassword);
-            
+
             if (!result.Succeeded)
             {
                 return GetErrorResult(result);
@@ -258,9 +260,9 @@ namespace ReleaseTracker.WebApi.Controllers
             if (hasRegistered)
             {
                 Authentication.SignOut(DefaultAuthenticationTypes.ExternalCookie);
-                
-                 ClaimsIdentity oAuthIdentity = await user.GenerateUserIdentityAsync(UserManager,
-                    OAuthDefaults.AuthenticationType);
+
+                ClaimsIdentity oAuthIdentity = await user.GenerateUserIdentityAsync(UserManager,
+                   OAuthDefaults.AuthenticationType);
                 ClaimsIdentity cookieIdentity = await user.GenerateUserIdentityAsync(UserManager,
                     CookieAuthenticationDefaults.AuthenticationType);
 
@@ -368,7 +370,7 @@ namespace ReleaseTracker.WebApi.Controllers
             result = await UserManager.AddLoginAsync(user.Id, info.Login);
             if (!result.Succeeded)
             {
-                return GetErrorResult(result); 
+                return GetErrorResult(result);
             }
             return Ok();
         }
