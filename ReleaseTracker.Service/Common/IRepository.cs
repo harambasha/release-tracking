@@ -10,8 +10,8 @@ namespace ReleaseTracker.Service.Common
     {
         long Insert(T entity);
         T Update(T entity);
-        bool Delete(long id);
-        T GetAll();
+        T Delete(long id);
+        List<T> GetAll();
         T GetById(long id);
     }
 }

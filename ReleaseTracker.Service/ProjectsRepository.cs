@@ -19,19 +19,24 @@ namespace ReleaseTracker.Service
             this.dbConnection = dbConnection;
         }
 
-        public bool Delete(long id)
+        public Project Delete(long id)
         {
-            throw new NotImplementedException();
+            return dbConnection.Query<Project>("[dbo].[DeleteProject]",
+                new { Id = id },
+                commandType: CommandType.StoredProcedure).SingleOrDefault();
         }
 
-        public Project GetAll()
+        public List<Project> GetAll()
         {
-            throw new NotImplementedException();
+            return dbConnection.Query<Project>("[dbo].[GetAllProjects]",
+                commandType: CommandType.StoredProcedure).ToList();
         }
 
         public Project GetById(long id)
         {
-            throw new NotImplementedException();
+            return dbConnection.Query<Project>("[dbo].[GetProjectById]",
+                new { Id = id },
+                commandType: CommandType.StoredProcedure).SingleOrDefault();
         }
 
         public long Insert(Project project)
@@ -46,7 +51,14 @@ namespace ReleaseTracker.Service
 
         public Project Update(Project project)
         {
-            return new Project();
+            return dbConnection.Query<Project>("[dbo].[UpdateProject]",
+                new
+                {
+                    Name = project.Name,
+                    Description = project.Description
+                },
+                commandType: CommandType.StoredProcedure
+                ).SingleOrDefault();
         }
     }
 }
