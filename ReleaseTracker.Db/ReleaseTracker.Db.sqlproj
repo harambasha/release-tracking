@@ -67,6 +67,10 @@
     <Build Include="Tables\Releases.sql" />
     <Build Include="Tables\Users.sql" />
     <Build Include="Stored procedures\Projects\InsertNewProject.sql" />
+    <Build Include="Stored procedures\Projects\UpdateProject.sql" />
+    <Build Include="Stored procedures\Projects\GetAllProjects.sql" />
+    <Build Include="Stored procedures\Projects\DeleteProject.sql" />
+    <Build Include="Stored procedures\Projects\GetProjectById.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ReleaseTracker.Db.publish.xml" />

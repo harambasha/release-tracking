@@ -5,4 +5,4 @@ AS
 	INSERT INTO Projects(Name,Description)
 			    VALUES(@Name,@Description)
 	SELECT SCOPE_IDENTITY()
-RETURN 0
+
