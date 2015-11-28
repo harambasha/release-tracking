@@ -1,0 +1,27 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [dbo].[Features] (Table)
+       [dbo].[Projects] (Table)
+       [dbo].[Releases] (Table)
+       [dbo].[Roles] (Table)
+       [dbo].[Users] (Table)
+       Foreign Key: unnamed constraint on [dbo].[Features] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[Releases] (Foreign Key)
+       [dbo].[DeleteProject] (Procedure)
+       [dbo].[GetAllProjects] (Procedure)
+       [dbo].[GetProjectById] (Procedure)
+       [dbo].[InsertNewProject] (Procedure)
+       [dbo].[InsertNewUser] (Procedure)
+       [dbo].[UpdateProject] (Procedure)
+
+** Supporting actions

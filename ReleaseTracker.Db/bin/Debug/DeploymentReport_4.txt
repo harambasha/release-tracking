@@ -1,0 +1,32 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       The column [dbo].[Features].[UserId] is being dropped, data loss could occur.
+
+** User actions
+     Drop
+       unnamed constraint on [dbo].[Features] (Foreign Key)
+     Alter
+       [dbo].[Features] (Table)
+     Create
+       [dbo].[Membership] (Table)
+       [dbo].[Roles] (Table)
+       [dbo].[Users_Roles] (Table)
+       Foreign Key: unnamed constraint on [dbo].[Users_Roles] (Foreign Key)
+       Foreign Key: unnamed constraint on [dbo].[Users_Roles] (Foreign Key)
+       [dbo].[DeleteProject] (Procedure)
+       [dbo].[GetAllProjects] (Procedure)
+       [dbo].[GetProjectById] (Procedure)
+       [dbo].[InsertNewProject] (Procedure)
+       [dbo].[UpdateProject] (Procedure)
+
+** Supporting actions
+
+The column [dbo].[Features].[UserId] is being dropped, data loss could occur.
+The column Approved on table [dbo].[Features] must be changed from NULL to NOT NULL. If the table contains data, the ALTER script may not work. To avoid this issue, you must add values to this column for all rows or mark it as allowing NULL values, or enable the generation of smart-defaults as a deployment option.
+

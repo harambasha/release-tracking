@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ReleaseTracker.Db", "ReleaseTracker.Db\ReleaseTracker.Db.sqlproj", "{CC9FB2FA-66AB-47E9-B062-C27FB1B90EAD}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ReleaseTracker.WebSite(1)", "ReleaseTracker.WebSite\", "{AF453AAE-D34D-4915-93B9-C4ABA373D193}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50332"
+		Debug.AspNetCompiler.PhysicalPath = "ReleaseTracker.WebSite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50332\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50332"
+		Release.AspNetCompiler.PhysicalPath = "ReleaseTracker.WebSite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50332\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50332"
+		SlnRelativePath = "ReleaseTracker.WebSite\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReleaseTracker.WebApi", "ReleaseTracker.WebApi\ReleaseTracker.WebApi.csproj", "{7F62819E-2C8B-47DD-AA2A-C0DED6C48D75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReleaseTracker.Service", "ReleaseTracker.Service\ReleaseTracker.Service.csproj", "{81080AD3-ADE7-4A53-B705-DB8ED52B9AAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReleaseTracker.Business", "ReleaseTracker.Business\ReleaseTracker.Business.csproj", "{EFA5F6F5-3526-4D19-AAB6-153E11B22646}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC9FB2FA-66AB-47E9-B062-C27FB1B90EAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC9FB2FA-66AB-47E9-B062-C27FB1B90EAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC9FB2FA-66AB-47E9-B062-C27FB1B90EAD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CC9FB2FA-66AB-47E9-B062-C27FB1B90EAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC9FB2FA-66AB-47E9-B062-C27FB1B90EAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC9FB2FA-66AB-47E9-B062-C27FB1B90EAD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{AF453AAE-D34D-4915-93B9-C4ABA373D193}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF453AAE-D34D-4915-93B9-C4ABA373D193}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF453AAE-D34D-4915-93B9-C4ABA373D193}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF453AAE-D34D-4915-93B9-C4ABA373D193}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{7F62819E-2C8B-47DD-AA2A-C0DED6C48D75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F62819E-2C8B-47DD-AA2A-C0DED6C48D75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F62819E-2C8B-47DD-AA2A-C0DED6C48D75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F62819E-2C8B-47DD-AA2A-C0DED6C48D75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81080AD3-ADE7-4A53-B705-DB8ED52B9AAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81080AD3-ADE7-4A53-B705-DB8ED52B9AAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81080AD3-ADE7-4A53-B705-DB8ED52B9AAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81080AD3-ADE7-4A53-B705-DB8ED52B9AAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFA5F6F5-3526-4D19-AAB6-153E11B22646}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFA5F6F5-3526-4D19-AAB6-153E11B22646}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFA5F6F5-3526-4D19-AAB6-153E11B22646}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFA5F6F5-3526-4D19-AAB6-153E11B22646}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
