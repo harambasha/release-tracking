@@ -60,6 +60,8 @@
     <Folder Include="Tables" />
     <Folder Include="Stored procedures" />
     <Folder Include="Stored procedures\Projects" />
+    <Folder Include="Scripts" />
+    <Folder Include="Stored procedures\Users" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Features.sql" />
@@ -71,8 +73,13 @@
     <Build Include="Stored procedures\Projects\GetAllProjects.sql" />
     <Build Include="Stored procedures\Projects\DeleteProject.sql" />
     <Build Include="Stored procedures\Projects\GetProjectById.sql" />
+    <Build Include="Tables\Roles.sql" />
+    <Build Include="Stored procedures\Users\InsertNewUser.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ReleaseTracker.Db.publish.xml" />
+    <None Include="ReleaseTracker_1.Db.publish.xml" />
+    <None Include="ReleaseTracker_2.Db.publish.xml" />
+    <None Include="MyConfiguration.publish.xml" />
   </ItemGroup>
 </Project>

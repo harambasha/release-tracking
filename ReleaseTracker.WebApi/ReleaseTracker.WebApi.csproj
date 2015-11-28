@@ -207,7 +207,8 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\ProjectsController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -284,6 +285,16 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ReleaseTracker.Business\ReleaseTracker.Business.csproj">
+      <Project>{efa5f6f5-3526-4d19-aab6-153e11b22646}</Project>
+      <Name>ReleaseTracker.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReleaseTracker.Service\ReleaseTracker.Service.csproj">
+      <Project>{81080ad3-ade7-4a53-b705-db8ed52b9aaa}</Project>
+      <Name>ReleaseTracker.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

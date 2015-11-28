@@ -1,5 +1,5 @@
 ﻿CREATE PROCEDURE [dbo].[InsertNewProject]
-	@Name NVARCHAR(150) NOT NULL,
+	@Name NVARCHAR(150),
 	@Description TEXT
 AS
 	INSERT INTO Projects(Name,Description)

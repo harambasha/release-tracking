@@ -10,11 +10,11 @@ using Dapper;
 
 namespace ReleaseTracker.Service
 {
-    class ProjectsRepository : IRepository<Project>
+    public class ProjectsRepository : IRepository<Project>
     {
         protected IDbConnection dbConnection;
 
-        ProjectsRepository(IDbConnection dbConnection)
+        public ProjectsRepository(IDbConnection dbConnection)
         {
             this.dbConnection = dbConnection;
         }
