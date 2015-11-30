@@ -3,10 +3,10 @@
 	@LastName NVARCHAR(50),
 	@Email NVARCHAR(100),
 	@Password NVARCHAR(100),
-	@Role NVARCHAR(100)
+	@RolaId BIGINT
 AS
-	INSERT INTO Users(FirstName,LastName,Email,Password,Role)
-				VALUES(@FirstName,@LastName,@Email,@Password,@Role)
+	INSERT INTO Users(FirstName,LastName,Email,Password,RolaId)
+				VALUES(@FirstName,@LastName,@Email,@Password,@RolaId)
 
 	SELECT SCOPE_IDENTITY()
 	

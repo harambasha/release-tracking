@@ -3,7 +3,3 @@ C:\Users\Armin Kazić\Documents\Visual Studio 2015\Projects\ReleaseTrackerProjec
 C:\Users\Armin Kazić\Documents\Visual Studio 2015\Projects\ReleaseTrackerProject\ReleaseTracker.Db\bin\Debug\ReleaseTracker.Db.pdb
 C:\Users\Armin Kazić\Documents\Visual Studio 2015\Projects\ReleaseTrackerProject\ReleaseTracker.Db\obj\Debug\ReleaseTracker.Db.dll
 C:\Users\Armin Kazić\Documents\Visual Studio 2015\Projects\ReleaseTrackerProject\ReleaseTracker.Db\obj\Debug\ReleaseTracker.Db.pdb
-C:\Users\Armin Kazić\Documents\Visual Studio 2015\Projects\ReleaseTrackerProject\ReleaseTracker.Db\obj\Debug\Model.xml
-C:\Users\Armin Kazić\Documents\Visual Studio 2015\Projects\ReleaseTrackerProject\ReleaseTracker.Db\obj\Debug\refactor.xml
-C:\Users\Armin Kazić\Documents\Visual Studio 2015\Projects\ReleaseTrackerProject\ReleaseTracker.Db\obj\Debug\postdeploy.sql
-C:\Users\Armin Kazić\Documents\Visual Studio 2015\Projects\ReleaseTrackerProject\ReleaseTracker.Db\obj\Debug\predeploy.sql

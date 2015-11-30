@@ -40,16 +40,21 @@ USE [$(DatabaseName)];
 
 
 GO
-PRINT N'Creating [dbo].[CheckEmailUniqueness]...';
+PRINT N'Altering [dbo].[InsertNewUser]...';
 
 
 GO
-CREATE PROCEDURE [dbo].[CheckEmailUniqueness]
-	@Email NVARCHAR(150)
+ALTER PROCEDURE [dbo].[InsertNewUser]
+	@FirstName NVARCHAR(50),
+	@LastName NVARCHAR(50),
+	@Email NVARCHAR(100),
+	@Password NVARCHAR(100),
+	@RolaId BIGINT
 AS
-	SELECT *
-	FROM Users
-	WHERE Email = @Email
+	INSERT INTO Users(FirstName,LastName,Email,Password,RolaId)
+				VALUES(@FirstName,@LastName,@Email,@Password,@RolaId)
+
+	SELECT SCOPE_IDENTITY()
 GO
 PRINT N'Update complete.';
 

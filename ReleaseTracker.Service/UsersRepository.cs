@@ -45,7 +45,7 @@ namespace ReleaseTracker.Service
                     LastName = user.LastName,
                     Email = user.Email,
                     Password = user.Password,
-                    Role = user.Role
+                    RolaId = user.RolaId
                 }, commandType: CommandType.StoredProcedure).SingleOrDefault();
         }
 
