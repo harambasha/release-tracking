@@ -1,5 +1,5 @@
 ﻿
-var app = angular.module('releaseTrackerApp', ['ngRoute','LocalStorageModule','ui.router']);
+var app = angular.module('releaseTrackerApp', ['ngRoute','ui.router']);
 
 app.config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
