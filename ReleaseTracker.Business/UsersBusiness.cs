@@ -18,12 +18,19 @@ namespace ReleaseTracker.Business
             UsersRepo = new UsersRepository(sqlConnection);
         }
 
-        public long Insert(User user)
+        public string Insert(User user)
         {
-            //later write some validation code
+            if (String.IsNullOrEmpty(user.FirstName) || String.IsNullOrEmpty(user.LastName) ||
+                 String.IsNullOrEmpty(user.Email) || String.IsNullOrEmpty(user.Password))
+            {
+                return "bad_request";
+            }
+            else if (!UsersRepo.CheckEmailUniqueness(user.Email))
+            {
+                return "conflict";
+            }
 
-            return UsersRepo.Insert(user);
-
+            return UsersRepo.Insert(user).ToString();
         }
 
     }

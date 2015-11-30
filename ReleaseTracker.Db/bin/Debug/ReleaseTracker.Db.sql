@@ -40,6 +40,17 @@ USE [$(DatabaseName)];
 
 
 GO
+PRINT N'Creating [dbo].[CheckEmailUniqueness]...';
+
+
+GO
+CREATE PROCEDURE [dbo].[CheckEmailUniqueness]
+	@Email NVARCHAR(150)
+AS
+	SELECT *
+	FROM Users
+	WHERE Email = @Email
+GO
 PRINT N'Update complete.';
 
 

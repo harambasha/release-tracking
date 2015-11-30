@@ -24,11 +24,30 @@ namespace ReleaseTracker.WebApi.Controllers
 
         public long Post(User user)
         {
-            //Unfinished implementation
+            try
+            {
+                UsersBusiness usersBusiness = new UsersBusiness(sqlConnection);
+                var returnedValue = usersBusiness.Insert(user);
+                long id = 0;
+                bool isNum = long.TryParse(returnedValue, out id);
+                if (!isNum)
+                {
+                    if (returnedValue == "bad_request")
+                    {
+                        throw new HttpResponseException(HttpStatusCode.BadRequest); //If data is not in the correct format 
+                    }
+                    else
+                    {
+                        throw new HttpResponseException(HttpStatusCode.Conflict); //if email is not unique
+                    }
+                }
 
-            return usersBusiness.Insert(user);
-
+                return id; //returns Success[200]
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
-
     }
 }

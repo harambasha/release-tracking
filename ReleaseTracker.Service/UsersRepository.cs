@@ -53,5 +53,18 @@ namespace ReleaseTracker.Service
         {
             throw new NotImplementedException();
         }
+
+        public bool CheckEmailUniqueness(string email) //Email is unique on the system
+        {
+            var result = dbConnection.Query<User>("[dbo].[CheckEmailUniqueness]",
+                new { Email = email },
+                commandType: CommandType.StoredProcedure).SingleOrDefault();
+
+            if (result == null)
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }
