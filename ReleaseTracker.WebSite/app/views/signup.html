@@ -27,8 +27,8 @@
             <input id="confirmPassword" type="password" placeholder="Confirm your password.." class="form-control" />
         </div>
         <div class="form-group">
-            <label for="uloga" style="font-weight:bold;font-size:14px;">Uloga u sistemu</label>
-            <select id="uloga" ng-model="selected_person" ng-options="r.Name for r in n" class="form-control">
+            <label for="uloga" style="font-weight:bold;font-size:14px;">Role</label>
+            <select id="uloga" ng-model="selected_person" ng-options="r.Name for r in roles" class="form-control">
                 <option>Choose a name</option>
             </select>
         </div>

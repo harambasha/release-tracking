@@ -1,13 +1,19 @@
 ﻿'use strict';
-app.controller('signupController', ['$scope', function ($scope) {
+app.controller('signupController', ['$scope', function ($scope,$http) {
    
-    var n = [{
-        Name:"Armin"
-    },
-    {
-        Name: "Kemila"
-    }
-    ];
+    $http.get("http://localhost:60126/api/Roles")
+    .then(function (response) {
+        $scope.roles = response.data.records;
+    });
 
-    $scope.n = n;
+
+    //var n = [{
+    //    Name:"Armin"
+    //},
+    //{
+    //    Name: "Kemila"
+    //}
+    //];
+
+    //$scope.n = n;
 }]);
