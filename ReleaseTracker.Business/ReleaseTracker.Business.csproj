@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="ProjectsBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RolesBusiness.cs" />
     <Compile Include="UsersBusiness.cs" />
   </ItemGroup>
   <ItemGroup>

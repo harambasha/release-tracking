@@ -82,3 +82,10 @@ C:\Users\Armin Kazić\Documents\Visual Studio 2015\Projects\ReleaseTrackerProjec
 C:\Users\Armin Kazić\Documents\Visual Studio 2015\Projects\ReleaseTrackerProject\ReleaseTracker.WebApi\bin\ReleaseTracker.Service.pdb
 C:\Users\Armin Kazić\Documents\Visual Studio 2015\Projects\ReleaseTrackerProject\ReleaseTracker.WebApi\bin\Dapper.pdb
 C:\Users\Armin Kazić\Documents\Visual Studio 2015\Projects\ReleaseTrackerProject\ReleaseTracker.WebApi\bin\Dapper.xml
+C:\Users\Armin Kazić\Documents\Visual Studio 2015\Projects\ReleaseTrackerProject\ReleaseTracker.WebApi\bin\Microsoft.Owin.Cors.dll
+C:\Users\Armin Kazić\Documents\Visual Studio 2015\Projects\ReleaseTrackerProject\ReleaseTracker.WebApi\bin\NLog.dll
+C:\Users\Armin Kazić\Documents\Visual Studio 2015\Projects\ReleaseTrackerProject\ReleaseTracker.WebApi\bin\System.Web.Http.Cors.dll
+C:\Users\Armin Kazić\Documents\Visual Studio 2015\Projects\ReleaseTrackerProject\ReleaseTracker.WebApi\bin\Microsoft.Owin.Cors.xml
+C:\Users\Armin Kazić\Documents\Visual Studio 2015\Projects\ReleaseTrackerProject\ReleaseTracker.WebApi\bin\NLog.xml
+C:\Users\Armin Kazić\Documents\Visual Studio 2015\Projects\ReleaseTrackerProject\ReleaseTracker.WebApi\bin\System.Web.Http.Cors.xml
+C:\Users\Armin Kazić\Documents\Visual Studio 2015\Projects\ReleaseTrackerProject\ReleaseTracker.WebApi\bin\System.Web.Cors.dll

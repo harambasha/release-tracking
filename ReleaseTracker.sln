@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ReleaseTracker.Db", "ReleaseTracker.Db\ReleaseTracker.Db.sqlproj", "{CC9FB2FA-66AB-47E9-B062-C27FB1B90EAD}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ReleaseTracker.WebSite(1)", "ReleaseTracker.WebSite\", "{AF453AAE-D34D-4915-93B9-C4ABA373D193}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ReleaseTracker.WebSite", "ReleaseTracker.WebSite\", "{AF453AAE-D34D-4915-93B9-C4ABA373D193}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_50332"

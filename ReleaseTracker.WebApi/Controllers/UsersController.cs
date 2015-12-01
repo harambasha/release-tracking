@@ -1,5 +1,6 @@
 ﻿using ReleaseTracker.Business;
 using ReleaseTracker.Service.Models;
+using ReleaseTracker.WebApi.HttpPipeline;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -34,11 +35,11 @@ namespace ReleaseTracker.WebApi.Controllers
                 {
                     if (returnedValue == "bad_request")
                     {
-                        throw new HttpResponseException(HttpStatusCode.BadRequest); //If data is not in the correct format 
+                        throw new ApiException(HttpStatusCode.BadRequest, "Supplied parameters in the request are malformed"); 
                     }
                     else
                     {
-                        throw new HttpResponseException(HttpStatusCode.Conflict); //if email is not unique
+                        throw new ApiException(HttpStatusCode.Conflict, "There is already a same user wih supplied information"); //if email is not unique
                     }
                 }
 

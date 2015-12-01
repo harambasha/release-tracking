@@ -62,6 +62,7 @@
     <Folder Include="Stored procedures\Projects" />
     <Folder Include="Scripts" />
     <Folder Include="Stored procedures\Users" />
+    <Folder Include="Stored procedures\Roles" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Features.sql" />
@@ -76,6 +77,7 @@
     <Build Include="Tables\Roles.sql" />
     <Build Include="Stored procedures\Users\InsertNewUser.sql" />
     <Build Include="Stored procedures\Users\CheckEmailUniqueness.sql" />
+    <Build Include="Stored procedures\Roles\GetAllRoles.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ReleaseTracker.Db.publish.xml" />

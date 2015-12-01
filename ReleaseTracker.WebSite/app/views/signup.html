@@ -1,10 +1,35 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-	<meta charset="utf-8" />
-</head>
-<body>
+﻿     <br />
+<br />
+<br />
 
-</body>
-</html>
+    <div ng-controller="signupController" style="width:500px;margin:0 auto;">
+        <h1 style="color:darkcyan;font-weight:bold;">Sign up</h1>
+        <br />
+        <br />
+        <div class="form-group">
+            <label for="firstName" style="font-weight:bold;font-size:14px;">First name</label>
+            <input id="firstName" type="text" placeholder="Enter your first name.." class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="lastName" style="font-weight:bold;font-size:14px;">Last name</label>
+            <input id="lastName" type="text" placeholder="Enter your last name.." class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="email" style="font-weight:bold;font-size:14px;">Email</label>
+            <input id="email" type="email" placeholder="Enter your email.." class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="password" style="font-weight:bold;font-size:14px;">Password</label>
+            <input id="password" type="password" placeholder="Enter your password.." class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="confirmPassword" style="font-weight:bold;font-size:14px;">Confirm password</label>
+            <input id="confirmPassword" type="password" placeholder="Confirm your password.." class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="uloga" style="font-weight:bold;font-size:14px;">Uloga u sistemu</label>
+            <select id="uloga" ng-model="selected_person" ng-options="r.Name for r in n" class="form-control">
+                <option>Choose a name</option>
+            </select>
+        </div>
+    </div>
