@@ -1,33 +1,21 @@
 ﻿<!DOCTYPE html>
-<html data-ng-app="releaseTrackerApp">
+<html ng-app="releaseTrackingApp">
 <head>
     <title>Release Tracker App</title>
     <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible" />
     <link href="content/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="content/css/site.css" rel="stylesheet" />
-    <link href="content/css/loading-bar.css" rel="stylesheet" />
-    <link href="content/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="content/css/jquery.timepicker.css" rel="stylesheet" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <!-- 3rd party libraries -->
-    <script src="Scripts/jquery-1.9.1.min.js"></script>
-    <script src="Scripts/angular.js"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
-    <script src="Scripts/angular-resource.min.js"></script>
-    <script src="Scripts/angular-ui-router.js"></script>
-    <script src="Scripts/angular-local-storage.min.js"></script>
-    <script src="Scripts/loading-bar.min.js"></script>
-    <script src="Scripts/ui-bootstrap.js"></script>
-    <script src="Scripts/ui-bootstrap-tpls.js"></script>
-    <script src="Scripts/underscore.min.js"></script>
-    <script src="Scripts/jquery.timepicker.js"></script>
-    <script src="Scripts/moment.js"></script>
-
-    <!--/SCRIPTS-->
-
-</head>
+    <script src="scripts/jquery-1.9.1.min.js"></script>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/angular-resource.min.js"></script>
+    <script src="scripts/angular-ui-router.min.js"></script>
+    <script src="scripts/angular-local-storage.min.js"></script>
+    <script src="scripts/ui-bootstrap.js"></script>
+    <script src="scripts/ui-bootstrap-tpls.js"></script>
+    <script src="scripts/underscore.min.js"></script>
+    </head>
 <body>
-
     <div class="container">
         <div ui-view></div>
     </div>
@@ -43,17 +31,12 @@
             </div>
         </div>
     </div>
-       <span></span>
-
-
-
     <!--APP MAIN SCRIPT-->
-    <script src="app/app.js"></script>
+    <script src="app/app.js?v=2"></script>
 
     <!--Load controllers-->
     <script src="app/controllers/main/homeController.js"></script>
     <script src="app/controllers/main/signupController.js"></script>
 
 </body>
-
 </html>

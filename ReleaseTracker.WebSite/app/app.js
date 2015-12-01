@@ -1,4 +1,5 @@
-﻿ 
+﻿
+var app = angular.module('releaseTrackingApp', ['ui.router']);
 
 app.config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
