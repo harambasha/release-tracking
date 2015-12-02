@@ -1,35 +1,55 @@
-﻿     <br />
+﻿<br />
 <br />
 <br />
 
-    <div ng-controller="signupController" style="width:500px;margin:0 auto;">
-        <h1 style="color:darkcyan;font-weight:bold;">Sign up</h1>
-        <br />
-        <br />
-        <div class="form-group">
+<style type="text/css">
+    .error {
+        color: darkslategrey;
+        font-weight: bold;
+    }
+</style>
+
+<div ng-controller="signupController" style="width:500px;margin:0 auto;">
+    <h1 style="color:darkcyan;font-weight:bold;">Sign up</h1>
+    <br />
+    <form method="post" name="frm" novalidate>
+        <div class="form-group" ng-class="{'has-error' : frm.firstName.$invalid && frm.firstName.$dirty}">
             <label for="firstName" style="font-weight:bold;font-size:14px;">First name</label>
-            <input id="firstName" type="text" placeholder="Enter your first name.." class="form-control" />
+            <input ng-model="firstName" id="firstName" name="firstName" type="text" placeholder="Enter your first name.." ng-required="true" class="form-control" />
+            <span ng-show="frm.firstName.$invalid && frm.firstName.$dirty" style="color:darkslategrey;font-weight:bold;">First name is required!</span>
         </div>
-        <div class="form-group">
+        <div class="form-group" ng-class="{'has-error' : frm.lastName.$invalid && frm.lastName.$dirty}">
             <label for="lastName" style="font-weight:bold;font-size:14px;">Last name</label>
-            <input id="lastName" type="text" placeholder="Enter your last name.." class="form-control" />
+            <input ng-model="lastName" id="lastName" name="lastName" ng-required="true" type="text" placeholder="Enter your last name.." class="form-control" />
+            <span ng-show="frm.lastName.$invalid && frm.lastName.$dirty" style="color:darkslategrey;font-weight:bold;">Last name is required!</span>
         </div>
-        <div class="form-group">
+        <div class="form-group" ng-class="{ 'has-error' : frm.email.$invalid && frm.email.$dirty }">
             <label for="email" style="font-weight:bold;font-size:14px;">Email</label>
-            <input id="email" type="email" placeholder="Enter your email.." class="form-control" />
+            <input name="email" ng-model="email" id="email" type="email" placeholder="Enter your email.." class="form-control" />
+            <span ng-if="frm.email.$error.email && frm.email.$dirty" style="color:darkslategrey;font-weight:bold;">Email is not in correct form</span>
+            <!--<span ng-if="frm.email.$error.required && frm.email.$dirty" style="color:darkslategrey;font-weight:bold;">Email is required!</span>-->
+
         </div>
-        <div class="form-group">
+        <div class="form-group" ng-class="{ 'has-error' : frm.password.$invalid frm.password.$dirty }">
             <label for="password" style="font-weight:bold;font-size:14px;">Password</label>
-            <input id="password" type="password" placeholder="Enter your password.." class="form-control" />
+            <input ng-model="password" name="password" ng-required="true" id="password" type="password" placeholder="Enter your password.." class="form-control" />
+            <span ng-show="frm.password.$invalid && frm.password.$dirty" style="color:darkslategrey;font-weight:bold;">Password is required!</span>
+
         </div>
-        <div class="form-group">
+        <div class="form-group" ng-class="{ 'has-error': frm.confirmPassword.$invalid && frm.confirmPassword.$dirty }">
             <label for="confirmPassword" style="font-weight:bold;font-size:14px;">Confirm password</label>
-            <input id="confirmPassword" type="password" placeholder="Confirm your password.." class="form-control" />
+            <input ng-model="confirmPassword" compare-to="password" id="confirmPassword" name="confirmPassword" ng-required="true" type="password" placeholder="Confirm your password.." class="form-control" />
+            <span ng-show="frm.confirmPassword.$invalid && frm.confirmPassword.$dirty" style="color:darkslategrey;font-weight:bold;">Confirmation password is required!</span>
+
         </div>
-        <div class="form-group">
+        <div class="form-group" ng-class="has-error" frm.selectList.$invalid && frm.selectList.$dirty>
             <label for="uloga" style="font-weight:bold;font-size:14px;">Role</label>
-            <select id="uloga" ng-model="selected_person" ng-options="r.Name for r in roles" class="form-control">
+            <select ng-required="true" id="uloga" name="selectedRole" ng-model="selectedRole" ng-options="r.Name for r in roles" class="form-control">
                 <option>Choose a name</option>
             </select>
+            <span ng-show="frm.selectedRole.$invalid && frm.selectedRole.$dirty" style="color:darkslategrey;font-weight:bold;">Please select a role!</span>
         </div>
-    </div>
+        <br />
+        <input class="btn btn-success" value="Register" type="submit" ng-disabled="frm.$invalid" ng-click="register()" />
+    </form>
+</div>

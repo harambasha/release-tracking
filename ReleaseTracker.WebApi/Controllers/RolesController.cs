@@ -27,21 +27,12 @@ namespace ReleaseTracker.WebApi.Controllers
         public List<Role> Get()
         {
             List<Role> roles = rolesBusiness.GetAll();
-
-            try
+            if (!roles.Any())
             {
-                if (!roles.Any())
-                {
-                    throw new ApiException(HttpStatusCode.NotFound,"No data found in the database");//zero roles in db
-                }
+                throw new ApiException(HttpStatusCode.NotFound, "No data found in the database");//zero roles in db
+            }
 
-                return roles;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            return roles;
         }
-
     }
 }

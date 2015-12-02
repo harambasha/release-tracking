@@ -66,5 +66,16 @@ namespace ReleaseTracker.Service
             }
             return false;
         }
+
+        public User GetUserByEmailAndPassword(string email, string password)
+        {
+            return dbConnection.Query<User>("[dbo].[GetUserByEmailAndPassword]",
+                new
+                {
+                    Email = email,
+                    Password = password
+                },
+                commandType: CommandType.StoredProcedure).SingleOrDefault();
+        }
     }
 }

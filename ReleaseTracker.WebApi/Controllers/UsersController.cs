@@ -24,9 +24,7 @@ namespace ReleaseTracker.WebApi.Controllers
         }
 
         public long Post(User user)
-        {
-            try
-            {
+       {
                 UsersBusiness usersBusiness = new UsersBusiness(sqlConnection);
                 var returnedValue = usersBusiness.Insert(user);
                 long id = 0;
@@ -44,11 +42,23 @@ namespace ReleaseTracker.WebApi.Controllers
                 }
 
                 return id; //returns Success[200]
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+        }
+
+        public User Get(string email, string password)
+        {
+                UsersBusiness usersBusiness = new UsersBusiness(sqlConnection);
+                User u = usersBusiness.GetByEmailAndPassword(email, password);
+
+                if(u == null)
+                {
+                    throw new ApiException(HttpStatusCode.NotFound, "User with supplied information was not found in DB.");
+                }
+                else if(u.Id == 0)
+                {
+                    throw new ApiException(HttpStatusCode.BadRequest, "Supplied parameters are malformed");
+                }
+
+                return u;
         }
     }
 }

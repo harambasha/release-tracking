@@ -33,6 +33,16 @@ namespace ReleaseTracker.Business
             return UsersRepo.Insert(user).ToString();
         }
 
+        public User GetByEmailAndPassword(string email, string password)
+        {
+            if(String.IsNullOrEmpty(email) || String.IsNullOrEmpty(password))
+            {
+                return new User { Id = 0 };
+            }
+
+            return UsersRepo.GetUserByEmailAndPassword(email, password);
+        }
+
     }
 
 }

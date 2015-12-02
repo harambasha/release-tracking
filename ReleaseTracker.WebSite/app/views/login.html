@@ -1,10 +1,17 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-	<meta charset="utf-8" />
-</head>
-<body>
-        
-</body>
-</html>
+﻿<br />
+<br />
+<br />
+
+<div ng-controller="loginController">
+    <h1 style="color:darkcyan;font-weight:bold;">Sign up</h1>
+    <form name="frmLogin" method="post">
+        <label>Email</label>
+        <input type="email" name="email" ng-model="email" />
+        <label>Password</label>
+        <input type="password" name="password" ng-model="password" />
+        <br />
+        <span ng-hide="valid" style="font-weight:bold;color:darkslategrey;">Email or password is incorrect</span>
+        <input type="submit" ng-click="login()" />
+    </form>
+
+</div>
