@@ -1,17 +1,22 @@
-﻿<br />
-<br />
-<br />
-
+﻿
 <div ng-controller="loginController">
-    <h1 style="color:darkcyan;font-weight:bold;">Sign up</h1>
-    <form name="frmLogin" method="post">
-        <label>Email</label>
-        <input type="email" name="email" ng-model="email" />
-        <label>Password</label>
-        <input type="password" name="password" ng-model="password" />
-        <br />
-        <span ng-hide="valid" style="font-weight:bold;color:darkslategrey;">Email or password is incorrect</span>
-        <input type="submit" ng-click="login()" />
-    </form>
-
+    <div class="container" style="padding:50px">
+        <h1 style="color:darkcyan;font-weight:bold;">Sign up</h1>
+        <form name="frmLogin" method="post" style="width:150px">
+            <div style="float:left;">
+                <label>Email</label>
+                <input type="email" name="email" ng-model="email" />
+            </div>
+            <div style="float:left">
+                <label>Password</label>
+                <input type="password" name="password" ng-model="password" />
+            </div>
+            <div style="float:left; padding-top:10px">
+                <input class="btn form-login" type="submit" ng-click="login()" />
+            </div>
+            <div style="float:left; padding-top:10px">
+                <span ng-show="invalidLogin" style="font-size:12px; color:red">Incorrect login details</span>
+            </div>
+        </form>
+    </div>
 </div>
