@@ -25,7 +25,6 @@ namespace ReleaseTracker.WebApi.Controllers
 
         public long Post(User user)
        {
-                UsersBusiness usersBusiness = new UsersBusiness(sqlConnection);
                 var returnedValue = usersBusiness.Insert(user);
                 long id = 0;
                 bool isNum = long.TryParse(returnedValue, out id);

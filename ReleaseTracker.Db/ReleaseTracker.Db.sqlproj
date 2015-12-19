@@ -79,6 +79,7 @@
     <Build Include="Stored procedures\Users\CheckEmailUniqueness.sql" />
     <Build Include="Stored procedures\Roles\GetAllRoles.sql" />
     <Build Include="Stored procedures\Users\GetUserByEmailAndPassword.sql" />
+    <Build Include="Stored procedures\Projects\CheckProjectNameUniqueness.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ReleaseTracker.Db.publish.xml" />

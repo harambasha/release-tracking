@@ -40,18 +40,16 @@ USE [$(DatabaseName)];
 
 
 GO
-PRINT N'Creating [dbo].[GetUserByEmailAndPassword]...';
+PRINT N'Creating [dbo].[CheckProjectNameUniqueness]...';
 
 
 GO
-CREATE PROCEDURE [dbo].[GetUserByEmailAndPassword]
-	@Email NVARCHAR(150),
-	@Password NVARCHAR(100)
-
+CREATE PROCEDURE [dbo].[CheckProjectNameUniqueness]
+	@Name NVARCHAR(150)
 AS
 	SELECT *
-	FROM Users
-	WHERE Email = @Email AND Password = @Password
+	FROM Projects
+	WHERE Name = @Name
 GO
 PRINT N'Update complete.';
 

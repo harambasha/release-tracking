@@ -23,5 +23,20 @@ namespace ReleaseTracker.Business
             return ProjectsRep.GetAll();
         }
 
+        public string Insert(Project project)
+        {
+            if (String.IsNullOrEmpty(project.Name))
+            {
+                return "bad_request";
+            }
+            else if (!ProjectsRep.CheckProjectNameUniqueness(project.Name))
+            {
+                return "conflict";
+            }
+
+            return ProjectsRep.Insert(project).ToString();
+
+        }
+
     }
 }

@@ -1,4 +1,6 @@
-﻿var app = angular.module('releaseTrackingApp', ['ui.router']);
+﻿'use strict';
+
+var app = angular.module('releaseTrackingApp', ['ui.router', 'ngResource']);
 
 app.config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
@@ -19,5 +21,11 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         url: '/signup',
         templateUrl: 'app/views/signup.html',
         controller: 'signupController'
+    });
+
+    $stateProvider.state('createProject', {
+        url: '/createProject',
+        templateUrl: 'app/views/createProject.html',
+        controller: 'projectsController'
     });
 });

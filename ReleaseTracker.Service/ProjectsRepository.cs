@@ -60,5 +60,18 @@ namespace ReleaseTracker.Service
                 commandType: CommandType.StoredProcedure
                 ).SingleOrDefault();
         }
+
+        public bool CheckProjectNameUniqueness(string name)
+        {
+            var result = dbConnection.Query<Project>("[dbo].[CheckProjectNameUniqueness]",
+                new { Name = name },
+                commandType: CommandType.StoredProcedure).SingleOrDefault();
+            if(result == null)
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }

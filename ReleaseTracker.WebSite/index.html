@@ -20,13 +20,19 @@
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <ul class="nav navbar-nav navbar-right">
-
+                <li class="dropdown">
+                    <a class="dropdown-toggle" style="font-size:12px" data-toggle="dropdown" href="#">Projects<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#/createProject" style="font-size:12px">Create project</a></li>
+                    </ul>
+                </li>
                 <li>
                     <a ui-sref="login" style="font-size:12px;">Login</a>
                 </li>
                 <li>
                     <a ui-sref="signup" style="font-size:12px">Signup</a>
                 </li>
+                
             </ul>
         </div>
     </div>
@@ -48,9 +54,14 @@
     <!--APP MAIN SCRIPT-->
     <script src="app/app.js"></script>
 
+    <!--Load services-->
+    <script src="app/services/userService.js"></script>
+    <script src="app/services/projectService.js"></script>    
+
     <!--Load controllers-->
     <script src="app/controllers/main/homeController.js"></script>
     <script src="app/controllers/main/signupController.js"></script>
     <script src="app/controllers/main/loginController.js"></script>
+    <script src="app/controllers/projects/projectsController.js"></script>
 </body>
 </html>

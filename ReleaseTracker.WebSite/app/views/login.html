@@ -1,8 +1,7 @@
 ﻿
-<div ng-controller="loginController">
     <div class="container" style="padding:50px">
-        <h1 style="color:darkcyan;font-weight:bold;">Sign up</h1>
-        <form name="frmLogin" method="post" style="width:150px">
+        <h1 style="color:darkcyan;font-weight:bold;">Log In</h1>
+        <form name="frmLogin" ng-submit="login()" novalidate style="width:150px">
             <div style="float:left;">
                 <label>Email</label>
                 <input type="email" name="email" ng-model="email" />
@@ -12,11 +11,10 @@
                 <input type="password" name="password" ng-model="password" />
             </div>
             <div style="float:left; padding-top:10px">
-                <input class="btn form-login" type="submit" ng-click="login()" />
+                <input class="btn form-login" type="submit" />
             </div>
             <div style="float:left; padding-top:10px">
                 <span ng-show="invalidLogin" style="font-size:12px; color:red">Incorrect login details</span>
             </div>
         </form>
     </div>
-</div>
